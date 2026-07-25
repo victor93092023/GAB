@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | Gutiérrez Abogados</title>
-  <meta name="description" content="Póngase en contacto con Gutiérrez Abogados. Consulta jurídica 100% en línea de 45 minutos para todo el territorio nacional.">
+  <title>Gutiérrez Abogados | Servicios Jurídicos Integrales</title>
+  <meta name="description" content="Firma legal independiente en Colombia. Asesoría y representación legal 100% digital, transparente y rigurosa.">
 
   <!-- TIPOGRAFÍAS DE PROYECTO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,11 +27,10 @@
       /* Tipografías */
       --font-title: 'Cormorant Garamond', Georgia, serif;
       --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-number: 'Inter', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
       /* Espaciado Editorial */
-      --space-hero-padding: 140px 8% 40px 8%;
-      --space-section-padding: 40px 8% 100px 8%;
+      --space-hero-padding: 160px 8% 80px 8%;
+      --space-section-padding: 80px 8%;
       --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -163,168 +162,63 @@
     }
 
     /* ==========================================================================
-       CSS: HERO CONTACT
+       CSS: HERO HOME
        ========================================================================== */
-    .contact-hero {
+    .hero {
       padding: var(--space-hero-padding);
       background-color: var(--clr-bg);
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    .contact-hero-header {
-      max-width: 800px;
+    .hero-content {
+      max-width: 900px;
       opacity: 0;
       transform: translateY(30px);
       animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       animation-delay: 0.2s;
     }
 
-    .page-label {
+    .hero-label {
       font-family: var(--font-body);
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--clr-text-muted);
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       display: block;
     }
 
-    .contact-hero-title {
+    .hero-title {
       font-family: var(--font-title);
-      font-size: 3.8rem;
+      font-size: 4.2rem;
       font-weight: 400;
-      line-height: 1.1;
+      line-height: 1.08;
       color: var(--clr-text-main);
-      margin-bottom: 24px;
+      margin-bottom: 28px;
+      letter-spacing: -0.5px;
     }
 
-    .contact-hero-lead {
+    .hero-desc {
       font-family: var(--font-body);
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 300;
       line-height: 1.7;
       color: var(--clr-text-muted);
-    }
-
-    /* ==========================================================================
-       CSS: CONTACT SECTION
-       ========================================================================== */
-    .contact-section {
-      padding: var(--space-section-padding);
-      background-color: var(--clr-bg);
-    }
-
-    .contact-container {
-      max-width: 900px;
-      border-top: 2px solid var(--clr-text-main);
-      padding-top: 40px;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
+      max-width: 720px;
       margin-bottom: 40px;
     }
 
-    .info-block-label {
-      font-family: var(--font-body);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--clr-text-muted);
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .info-block-text {
-      font-family: var(--font-title);
-      font-size: 1.8rem;
-      font-weight: 400;
-      color: var(--clr-text-main);
-      text-decoration: none;
-      transition: var(--transition-smooth);
-      display: block;
-      line-height: 1.3;
-    }
-
-    a.info-block-text:hover {
-      color: var(--clr-accent-red);
-    }
-
-    .info-block-sub {
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      font-weight: 300;
-      color: var(--clr-text-muted);
-      margin-top: 8px;
-      line-height: 1.6;
-    }
-
-    /* TARJETA DETALLE DE CONSULTA (DURACIÓN Y COSTO) */
-    .consultation-details-card {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      padding: 32px;
-      background-color: #FAFAFA;
-      border: 1px solid var(--clr-gray-border);
-      border-left: 3px solid var(--clr-text-main);
-      margin-bottom: 40px;
-    }
-
-    .detail-item-title {
-      font-family: var(--font-body);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--clr-text-muted);
-      margin-bottom: 6px;
-      display: block;
-    }
-
-    .detail-item-value {
-      font-family: var(--font-title);
-      font-size: 2rem;
-      font-weight: 600;
-      color: var(--clr-text-main);
-    }
-
-    /* BOX DE AGENDAMIENTO */
-    .direct-agendar-box {
-      padding: 40px;
-      border: 1px solid var(--clr-gray-border);
-      background-color: var(--clr-bg);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 20px;
-    }
-
-    .direct-agendar-title {
-      font-family: var(--font-title);
-      font-size: 2rem;
-      font-weight: 400;
-    }
-
-    .direct-agendar-desc {
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      font-weight: 300;
-      color: var(--clr-text-muted);
-      line-height: 1.6;
-      max-width: 600px;
-    }
-
-    /* BOTÓN PRINCIPAL NEGRO CON HOVER EN ROJO */
-    .btn-black-to-red {
+    /* BOTONES GENERALES */
+    .btn-primary {
       display: inline-block;
       background-color: var(--clr-text-main);
       color: #FFFFFF;
       border: 1px solid var(--clr-text-main);
-      padding: 16px 36px;
+      padding: 18px 40px;
       font-family: var(--font-body);
       font-size: 0.75rem;
       font-weight: 600;
@@ -335,10 +229,73 @@
       cursor: pointer;
     }
 
-    .btn-black-to-red:hover {
+    .btn-primary:hover {
       background-color: var(--clr-accent-red);
       border-color: var(--clr-accent-red);
       color: #FFFFFF;
+    }
+
+    /* ==========================================================================
+       CSS: SECCIÓN PILARES / CARACTERÍSTICAS
+       ========================================================================== */
+    .features-section {
+      padding: var(--space-section-padding);
+      border-top: 1px solid var(--clr-gray-border);
+      background-color: var(--clr-bg);
+    }
+
+    .section-title-wrapper {
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-family: var(--font-title);
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: var(--clr-text-main);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .feature-card {
+      padding: 32px;
+      border: 1px solid var(--clr-gray-border);
+      transition: var(--transition-smooth);
+      background: #FAFAFA;
+    }
+
+    .feature-card:hover {
+      border-color: var(--clr-text-main);
+      background: #FFFFFF;
+      transform: translateY(-4px);
+    }
+
+    .feature-num {
+      font-family: var(--font-title);
+      font-size: 1.8rem;
+      color: var(--clr-accent-red);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .feature-title {
+      font-family: var(--font-title);
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--clr-text-main);
+    }
+
+    .feature-desc {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--clr-text-muted);
+      line-height: 1.6;
     }
 
     /* ==========================================================================
@@ -361,14 +318,13 @@
     .footer {
       padding: 60px 8% 40px 8%;
       background-color: var(--clr-bg);
+      border-top: 1px solid var(--clr-gray-light);
     }
 
     .footer-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 32px;
-      border-top: 1px solid var(--clr-gray-light);
       font-size: 0.75rem;
       color: var(--clr-text-muted);
       letter-spacing: 1px;
@@ -383,17 +339,17 @@
     }
 
     @media (max-width: 1024px) {
-      .contact-hero {
-        padding: 120px 6% 30px 6%;
+      .hero {
+        padding: 140px 6% 60px 6%;
       }
 
-      .contact-hero-title {
-        font-size: 2.8rem;
+      .hero-title {
+        font-size: 3.2rem;
       }
 
-      .info-grid {
+      .features-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 24px;
       }
 
       .menu-toggle {
@@ -419,25 +375,15 @@
     }
 
     @media (max-width: 640px) {
-      .contact-hero-title {
-        font-size: 2.2rem;
+      .hero-title {
+        font-size: 2.4rem;
       }
 
-      .info-block-text {
-        font-size: 1.4rem;
+      .hero-desc {
+        font-size: 1rem;
       }
 
-      .consultation-details-card {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 24px;
-      }
-
-      .direct-agendar-box {
-        padding: 24px;
-      }
-
-      .btn-black-to-red {
+      .btn-primary {
         width: 100%;
         text-align: center;
       }
@@ -454,7 +400,7 @@
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
-    <!-- LOGO SUPERIOR DIRECCIONA A INICIO (index.html) -->
+    <!-- LOGO SUPERIOR REINICIA A LA PÁGINA DE INICIO -->
     <a href="index.html" class="brand-logo" aria-label="Gutiérrez Abogados Inicio">Gutiérrez Abogados</a>
     
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
@@ -464,68 +410,50 @@
     </button>
 
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html" class="active-link">Inicio</a></li>
       <li><a href="quienes-somos.html">Quiénes Somos</a></li>
       <li><a href="areas-de-practica.html">Áreas de Práctica</a></li>
-      <li><a href="contacto.html" class="active-link">Contacto</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
       <li><a href="https://www.gutierrezabogados.co/contactarnos" class="nav-btn-agendar">Agendar</a></li>
     </ul>
   </nav>
 
-  <!-- HERO CONTACTO -->
-  <main class="contact-hero">
-    <div class="contact-hero-header">
-      <span class="page-label">Atención Inmediata</span>
-      <h1 class="contact-hero-title">Inicie su consulta legal.</h1>
-      <p class="contact-hero-lead">
-        Estamos a su disposición para evaluar su caso con la rigurosidad, rapidez y transparencia que caracteriza a nuestra firma.
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-content">
+      <span class="hero-label">Firma Legal Independiente</span>
+      <h1 class="hero-title">Servicios Jurídicos Integrales con Metodología Digital.</h1>
+      <p class="hero-desc">
+        Ofrecemos asesoría y representación jurídica rigurosa en todo Colombia. Un enfoque orientado a la transparencia, eficiencia y atención estratégica personalizada.
       </p>
+      <a href="contacto.html" class="btn-primary">AGENDAR CONSULTA VIRTUAL</a>
     </div>
-  </main>
+  </header>
 
-  <!-- SECCIÓN INFORMACIÓN DE CONTACTO & AGENDAMIENTO -->
-  <section class="contact-section">
-    <div class="contact-container reveal-element">
-      
-      <!-- GRILLA DE CANALES Y HORARIO -->
-      <div class="info-grid">
-        <div class="info-block">
-          <span class="info-block-label">Modalidad de Servicio</span>
-          <span class="info-block-text">Atención 100% en Línea</span>
-          <p class="info-block-sub">Asesoría jurídica virtual especializada con cobertura para todo el territorio nacional.</p>
-        </div>
+  <!-- PILARES / CARACTERÍSTICAS -->
+  <section class="features-section">
+    <div class="section-title-wrapper reveal-element">
+      <h2 class="section-title">Nuestra Propuesta de Valor</h2>
+    </div>
 
-        <div class="info-block">
-          <span class="info-block-label">Correo Electrónico</span>
-          <a href="mailto:contacto@gutierrezabogados.co" class="info-block-text">contacto@gutierrezabogados.co</a>
-          <p class="info-block-sub">Respuesta a inquietudes procesales en menos de 24 horas hábiles.</p>
-        </div>
-
-        <div class="info-block">
-          <span class="info-block-label">Horario de Atención</span>
-          <span class="info-block-text" style="font-size: 1.5rem;">Lunes a Viernes: 9:00 AM — 6:00 PM</span>
-        </div>
+    <div class="features-grid">
+      <div class="feature-card reveal-element">
+        <span class="feature-num">01</span>
+        <h3 class="feature-title">Atención 100% Digital</h3>
+        <p class="feature-desc">Acceda a asesorías legales directas sin desplazamientos, optimizando tiempos de respuesta para todo el país.</p>
       </div>
 
-      <!-- DETALLES DE LA CONSULTA (DURACIÓN Y COSTO) -->
-      <div class="consultation-details-card">
-        <div>
-          <span class="detail-item-title">Duración de la Sesión</span>
-          <span class="detail-item-value">45 Minutos</span>
-        </div>
-        <div>
-          <span class="detail-item-title">Valor de la Consulta</span>
-          <span class="detail-item-value">$80.000 COP</span>
-        </div>
+      <div class="feature-card reveal-element">
+        <span class="feature-num">02</span>
+        <h3 class="feature-title">Transparencia Absoluta</h3>
+        <p class="feature-desc">Claridad total en el diagnóstico inicial, honorarios previsibles y seguimiento permanente del estado procesal.</p>
       </div>
 
-      <!-- CUADRO DE AGENDAMIENTO CON BOTÓN NEGRO A ROJO -->
-      <div class="direct-agendar-box">
-        <h2 class="direct-agendar-title">Agendamiento de Citas</h2>
-        <p class="direct-agendar-desc">Acceda directamente a nuestro sistema de agendamiento para seleccionar la fecha y hora de su consulta virtual de 45 minutos.</p>
-        <a href="https://www.gutierrezabogados.co/contactarnos" class="btn-black-to-red">RESERVAR CITA AHORA</a>
+      <div class="feature-card reveal-element">
+        <span class="feature-num">03</span>
+        <h3 class="feature-title">Rigurosidad Técnica</h3>
+        <p class="feature-desc">Análisis exhaustivo del marco normativo y jurisprudencial para construir estrategias legales sólidas.</p>
       </div>
-
     </div>
   </section>
 
@@ -570,7 +498,7 @@
         });
       });
 
-      // Reveal on Scroll con IntersectionObserver
+      // Reveal on Scroll
       const observerOptions = {
         threshold: 0.15,
         rootMargin: '0px 0px -50px 0px'
