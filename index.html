@@ -74,26 +74,26 @@
       animation-delay: 0.1s;
     }
 
-    .brand-eyebrow {
+    /* JERARQUÍA DE ENCABEZADO CORREGIDA */
+    .hero-brand-title {
       font-family: var(--font-title);
-      font-size: 1.8rem;
+      font-size: 4.2rem;
       font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--clr-text-main);
-      margin-bottom: 20px;
-      display: block;
-      line-height: 1.2;
-    }
-
-    .hero-title {
-      font-family: var(--font-title);
-      font-size: 3.6rem;
-      font-weight: 400;
-      line-height: 1.1;
+      line-height: 1.05;
       letter-spacing: -0.5px;
       color: var(--clr-text-main);
-      margin-bottom: 24px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .hero-subtitle-tag {
+      font-family: var(--font-title);
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: var(--clr-text-muted);
+      margin-bottom: 28px;
+      display: block;
     }
 
     .hero-subtitle {
@@ -248,7 +248,7 @@
     }
 
     /* ==========================================================================
-       CSS: SECCIÓN DE CONTACTO (AJUSTADA: COMPACTA)
+       CSS: SECCIÓN DE CONTACTO (COMPACTA)
        ========================================================================== */
     .contact-section {
       padding: var(--space-section-padding);
@@ -264,14 +264,14 @@
 
     .contact-card {
       position: relative;
-      padding: 20px 24px; /* Relleno reducido */
+      padding: 20px 24px;
       border: 1px solid var(--clr-gray-border);
       background-color: #FAFAFA;
       text-decoration: none;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 110px; /* Altura mínima reducida */
+      min-height: 110px;
       transition: var(--transition-smooth);
       overflow: hidden;
     }
@@ -358,7 +358,7 @@
     }
 
     /* ==========================================================================
-       CSS: FOOTER (CON REDES SOCIALES)
+       CSS: FOOTER
        ========================================================================== */
     .footer {
       padding: 60px 8% 40px 8%;
@@ -399,7 +399,7 @@
     }
 
     /* ==========================================================================
-       CSS: ANIMACIONES & RESPONSIVE
+       CSS: RESPONSIVE
        ========================================================================== */
     @keyframes heroFadeUp {
       from { opacity: 0; transform: translateY(30px); }
@@ -422,12 +422,12 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .brand-eyebrow {
-        font-size: 1.5rem;
+      .hero-brand-title {
+        font-size: 3.2rem;
       }
 
-      .hero-title {
-        font-size: 2.8rem;
+      .hero-subtitle-tag {
+        font-size: 1.3rem;
       }
 
       .hero-media {
@@ -440,12 +440,12 @@
         grid-template-columns: 1fr;
       }
 
-      .brand-eyebrow {
-        font-size: 1.3rem;
+      .hero-brand-title {
+        font-size: 2.5rem;
       }
 
-      .hero-title {
-        font-size: 2.2rem;
+      .hero-subtitle-tag {
+        font-size: 1.1rem;
       }
 
       .hero-subtitle {
@@ -475,9 +475,12 @@
   <!-- HERO SECTION -->
   <main class="hero" id="quienes-somos">
     <div class="hero-content">
-      <span class="brand-eyebrow">Gutiérrez Abogados</span>
+      <!-- JERARQUÍA CORREGIDA -->
+      <h1>
+        <span class="hero-brand-title">Gutiérrez Abogados</span>
+      </h1>
+      <span class="hero-subtitle-tag">Servicios Jurídicos Integrales</span>
 
-      <h1 class="hero-title">Servicios Jurídicos Integrales</h1>
       <p class="hero-subtitle">
         Una firma independiente que combina experiencia jurídica con tecnología para ofrecer un servicio más ágil y transparente.
       </p>
