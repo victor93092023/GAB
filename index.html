@@ -74,7 +74,6 @@
       animation-delay: 0.1s;
     }
 
-    /* Nombre de Marca Encima del Título Principal (AJUSTADO PARA MAYOR PRESENCIA) */
     .brand-eyebrow {
       font-family: var(--font-title);
       font-size: 1.8rem;
@@ -249,7 +248,7 @@
     }
 
     /* ==========================================================================
-       CSS: SECCIÓN DE CONTACTO INTERACTIVA Y ELEGANTE
+       CSS: SECCIÓN DE CONTACTO
        ========================================================================== */
     .contact-section {
       padding: var(--space-section-padding);
@@ -277,7 +276,6 @@
       overflow: hidden;
     }
 
-    /* Línea indicadora superior interactiva */
     .contact-card::before {
       content: '';
       position: absolute;
@@ -319,7 +317,6 @@
       color: var(--clr-text-muted);
     }
 
-    /* Flecha de acción animada */
     .contact-card-icon {
       font-family: var(--font-body);
       font-size: 1.1rem;
@@ -361,7 +358,7 @@
     }
 
     /* ==========================================================================
-       CSS: FOOTER
+       CSS: FOOTER (CON REDES SOCIALES)
        ========================================================================== */
     .footer {
       padding: 60px 8% 40px 8%;
@@ -372,11 +369,33 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
       padding-top: 32px;
       border-top: 1px solid var(--clr-gray-light);
       font-size: 0.75rem;
       color: var(--clr-text-muted);
       letter-spacing: 1px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .footer-social-link {
+      color: var(--clr-text-main);
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-social-link:hover {
+      color: var(--clr-accent-red);
     }
 
     /* ==========================================================================
@@ -441,8 +460,12 @@
 
       .footer-bottom {
         flex-direction: column;
-        gap: 12px;
+        gap: 16px;
         text-align: center;
+      }
+
+      .footer-socials {
+        justify-content: center;
       }
     }
   </style>
@@ -452,7 +475,6 @@
   <!-- HERO SECTION -->
   <main class="hero" id="quienes-somos">
     <div class="hero-content">
-      <!-- NOMBRE DE MARCA AGREGADO EN EL ENCABEZADO -->
       <span class="brand-eyebrow">Gutiérrez Abogados</span>
 
       <h1 class="hero-title">Servicios Jurídicos Integrales</h1>
@@ -466,7 +488,6 @@
         Servicio 100% en línea en todo Colombia. Garantizamos el seguimiento continuo de cada proceso mediante informes mensuales y el acceso permanente a su expediente digital.
       </p>
 
-      <!-- BOTÓN AGENDAR CONSULTA VINCULADO A GOOGLE CALENDAR -->
       <a href="https://www.gutierrezabogados.co/contactarnos" target="_blank" rel="noopener noreferrer" class="btn-primary">
         Agendar Consulta
       </a>
@@ -557,6 +578,12 @@
   <footer class="footer">
     <div class="footer-bottom">
       <span>&copy; Gutiérrez Abogados. Todos los derechos reservados.</span>
+      
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/gutierrez_aboga2/" target="_blank" rel="noopener noreferrer" class="footer-social-link">Instagram ↗</a>
+        <a href="https://www.facebook.com/share/18DvkoeYdW/" target="_blank" rel="noopener noreferrer" class="footer-social-link">Facebook ↗</a>
+      </div>
+
       <span>Metodología Digital &amp; Transparencia</span>
     </div>
   </footer>
